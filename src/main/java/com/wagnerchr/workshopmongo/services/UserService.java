@@ -34,4 +34,10 @@ public class UserService { // Access Repository
 		return new User(objDTO.getId(), objDTO.getName(), objDTO.getEmail());
 	}
 	
+	public void delete(String id) {
+		findById(id);
+		repo.deleteById(id);
+		
+	}
+	
 }
